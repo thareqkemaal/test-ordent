@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Homepage from './pages/homepage';
+import TaskSatu from './pages/task-1';
+import TaskDua from './pages/task-2';
+import TaskTiga from './pages/task-3';
+import TaskEmpat from './pages/task-4';
+import NotFound from './pages/notfound';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/task-1' element={<TaskSatu />} />
+        <Route path='/task-2' element={<TaskDua />} />
+        <Route path='/task-3' element={<TaskTiga />} />
+        <Route path='/task-4' element={<TaskEmpat />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
