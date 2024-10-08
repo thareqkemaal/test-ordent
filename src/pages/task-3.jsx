@@ -10,23 +10,22 @@ const TaskTiga = () => {
 
     useEffect(() => {
         setResult("");
-        const remain = combine(firstStr, secondStr, thirdStr);
-        setResult(remain);
+        const res = combine(firstStr, secondStr, thirdStr);
+        setResult(res);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [result, firstStr, secondStr, thirdStr]);
 
     const combine = (a, b, c) => {
-        console.log(a, b, c);
+        const maxStrLength = (a + b + c).length;
 
-        const arrA = a.split("");
-        // const arrB = b.split("");
-        // const arrC = c.split("");
-
-        for (let i = 0; i >= arrA.length; i++){
-            console.log(a, "=>", i)
+        let resStr = '';
+        for (let i = 0; i < maxStrLength; i++) {
+            if (i < a.length) resStr += a[i];
+            if (i < b.length) resStr += b[i];
+            if (i < c.length) resStr += c[i];
         }
 
-        
+        return resStr;
     }; 
 
 
