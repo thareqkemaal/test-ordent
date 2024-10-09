@@ -145,7 +145,10 @@ const TaskEmpat = () => {
             <p className="text-sm text-red-500">{error && "First and Last Name can only 2 words. example: John Durant or John-Durant or von John-Durant"}</p>
             <button 
                 className="border border-black rounded-lg px-2 mt-2 hover:bg-gray-200"
-                onClick={() => navigate("/")}>Back</button>
+                onClick={() => navigate("/")}
+            >
+                Back
+            </button>
         </div>
     )
 };

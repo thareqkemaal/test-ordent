@@ -78,7 +78,10 @@ const TaskDua = () => {
             </div>
             <button 
                 className="border border-black rounded-lg px-2 mt-2 hover:bg-gray-200"
-                onClick={() => navigate("/")}>Back</button>
+                onClick={() => navigate("/")}
+            >
+                Back
+            </button>
         </div>
     )
 };
